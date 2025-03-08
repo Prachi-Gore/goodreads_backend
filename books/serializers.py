@@ -1,6 +1,7 @@
 from rest_framework.serializers import ModelSerializer,ValidationError;
 from .models import Book,Author,Genre,Review
 from custom_authentication.serializers import UserSerializer;
+from rest_framework import serializers
 
 class AuthorSerializer(ModelSerializer):
     class Meta:
@@ -23,8 +24,11 @@ class ReviewSerializer(ModelSerializer):
 
         
 class BookSerializer(ModelSerializer):
-    author = AuthorSerializer(read_only=True)  # Include author details
-    genres = GenreSerializer(many=True, read_only=True)  # Include list of genre details
+    # author = AuthorSerializer(read_only=True)  # Include author details
+    # genres = GenreSerializer(many=True, read_only=True)  # Include list of genre details
+    book_cover = serializers.ImageField()  # Ensures it shows as a file upload field in browser
+    author = serializers.PrimaryKeyRelatedField(queryset=Author.objects.all())  # Shows dropdown for author
+    genres = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)  # Multi-select for genres
     reviews = ReviewSerializer(many=True, read_only=True)
     class Meta:
         model=Book

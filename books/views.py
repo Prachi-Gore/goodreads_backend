@@ -7,6 +7,7 @@ from rest_framework import status
 from rest_framework.filters import SearchFilter
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authentication import TokenAuthentication
+from rest_framework.parsers import MultiPartParser, FormParser
 from .models import Review
 from .serializers import ReviewSerializer
 # from django.views.decorators.csrf import csrf_exempt
@@ -147,7 +148,7 @@ class ReviewViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-
+    parser_classes = (MultiPartParser, FormParser)  # Enable file uploads
    #  def perform_create(self, serializer):
    #      # Automatically associate the user with the review
    #      serializer.save(user=self.request.user)  # Set user here
