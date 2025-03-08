@@ -1,0 +1,152 @@
+[
+  {
+    "model": "books.book",
+    "pk": 11,
+    "fields": {
+      "book_cover": "book_covers/Godaan_lf4XNdA.jpg",
+      "title": "Godaan",
+      "author": "3",
+      "description": "This novel narrates the struggles of an Indian farmer facing life's challenges.",
+      "pages": 300,
+      "publishDate": "1936-04-25",
+      "rating": 2.0,
+      "createdAt": "2024-10-06T07:38:40.059Z",
+      "updatedAt": "2024-10-06T08:39:36.519Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 12,
+    "fields": {
+      "book_cover": "book_covers/Kasba.jpg",
+      "title": "Kasba",
+      "author": "4",
+      "description": "A collection of stories featuring various characters in a small town.",
+      "pages": 250,
+      "publishDate": "1980-02-25",
+      "rating": 3.0,
+      "createdAt": "2024-10-06T08:42:01.158Z",
+      "updatedAt": "2024-10-06T08:42:01.158Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 13,
+    "fields": {
+      "book_cover": "book_covers/Shivaji_The_Lion_of_Hind.jpg",
+      "title": "Shivaji: The Lion of Hind",
+      "author": "5",
+      "description": "An inspiring book based on the life of Chhatrapati Shivaji Maharaj.",
+      "pages": 500,
+      "publishDate": "2000-12-04",
+      "rating": 3.0,
+      "createdAt": "2024-10-06T08:45:00.347Z",
+      "updatedAt": "2024-10-06T08:45:00.347Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 14,
+    "fields": {
+      "book_cover": "book_covers/My_Fathers_Stories.jpg",
+      "title": "My Father's Stories",
+      "author": "6",
+      "description": "A son's narration of his father's life stories.",
+      "pages": 101,
+      "publishDate": "2005-06-18",
+      "rating": 0.0,
+      "createdAt": "2024-10-06T08:47:09.283Z",
+      "updatedAt": "2024-10-06T08:47:09.283Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 15,
+    "fields": {
+      "book_cover": "book_covers/master_of_novels.jpg",
+      "title": "Master of Novels",
+      "author": "7",
+      "description": "An exquisite collection of Indian novels.",
+      "pages": 500,
+      "publishDate": "2010-11-06",
+      "rating": 4.2,
+      "createdAt": "2024-10-06T08:51:38.179Z",
+      "updatedAt": "2024-10-06T08:51:38.179Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 16,
+    "fields": {
+      "book_cover": "book_covers/Teaching_and_Educational_Principles.jpg",
+      "title": "Teaching and Educational Principles",
+      "author": "8",
+      "description": "A book based on the principles of education.",
+      "pages": 420,
+      "publishDate": "1947-04-12",
+      "rating": 4.8,
+      "createdAt": "2024-10-06T08:53:41.111Z",
+      "updatedAt": "2024-10-06T08:53:41.111Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 17,
+    "fields": {
+      "book_cover": "book_covers/where_is_what.jpg",
+      "title": "Where Is What?",
+      "author": "9",
+      "description": "A collection of stories based on psychological themes.",
+      "pages": 230,
+      "publishDate": "2014-09-30",
+      "rating": 3.0,
+      "createdAt": "2024-10-06T08:57:29.307Z",
+      "updatedAt": "2024-10-06T08:57:29.308Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 18,
+    "fields": {
+      "book_cover": "book_covers/King_Salim.jpg",
+      "title": "King Salim",
+      "author": "10",
+      "description": "A story based on the life of Mughal King Salim.",
+      "pages": 400,
+      "publishDate": "2020-10-17",
+      "rating": 2.7,
+      "createdAt": "2024-10-06T08:58:42.956Z",
+      "updatedAt": "2024-10-06T08:58:42.956Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 19,
+    "fields": {
+      "book_cover": "book_covers/web_of_hopes.jpg",
+      "title": "Web of Hopes",
+      "author": "11",
+      "description": "An exciting love story.",
+      "pages": 400,
+      "publishDate": "2019-05-05",
+      "rating": 3.2,
+      "createdAt": "2024-10-06T09:01:05.649Z",
+      "updatedAt": "2024-10-06T09:01:05.649Z"
+    }
+  },
+  {
+    "model": "books.book",
+    "pk": 20,
+    "fields": {
+      "book_cover": "book_covers/Shivaji_and_His_Era.jpg",
+      "title": "Shivaji and His Era",
+      "author": "12",
+      "description": "A detailed account of historical events during Chhatrapati Shivaji Maharaj's time.",
+      "pages": 800,
+      "publishDate": "1950-09-30",
+      "rating": 4.0,
+      "createdAt": "2024-10-06T09:02:39.247Z",
+      "updatedAt": "2024-10-06T09:02:39.247Z"
+    }
+  }
+]

@@ -1,0 +1,32 @@
+# 1️⃣ Ignore Virtual Environment (Your `env` folder)
+env/
+
+# 2️⃣ Ignore Python Compiled Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 3️⃣ Ignore Environment Variables & Secrets
+.env
+*.env
+credential.txt
+
+# 5️⃣ Ignore Static & Media Files (Use cloud storage instead)
+media/
+static/
+
+# 6️⃣ Ignore Logs, Cache & Celery
+*.log
+*.out
+*.pid
+celerybeat-schedule
+
+# 9️⃣ Ignore Deployment & Render-Specific Files
+render.yaml
+docker-compose.override.yml
+
+# 1️⃣1️⃣ Ignore OS & Git Generated Files
+.DS_Store
+*.swp
+

@@ -1,0 +1,16 @@
+[
+  { "model": "books.genre", "pk": 1, "fields": { "genre_name": "Novel" } },
+  { "model": "books.genre", "pk": 2, "fields": { "genre_name": "Social" } },
+  {
+    "model": "books.genre",
+    "pk": 3,
+    "fields": { "genre_name": "Short Stories" }
+  },
+  { "model": "books.genre", "pk": 4, "fields": { "genre_name": "History" } },
+  { "model": "books.genre", "pk": 5, "fields": { "genre_name": "Biography" } },
+  { "model": "books.genre", "pk": 6, "fields": { "genre_name": "Literature" } },
+  { "model": "books.genre", "pk": 7, "fields": { "genre_name": "Education" } },
+  { "model": "books.genre", "pk": 8, "fields": { "genre_name": "Psychology" } },
+  { "model": "books.genre", "pk": 9, "fields": { "genre_name": "Story" } },
+  { "model": "books.genre", "pk": 11, "fields": { "genre_name": "Romance" } }
+]

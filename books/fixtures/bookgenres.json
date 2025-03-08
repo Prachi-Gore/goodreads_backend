@@ -1,0 +1,70 @@
+[
+  { "model": "books.bookgenre", "pk": 3, "fields": { "book": 11, "genre": 1 } },
+  { "model": "books.bookgenre", "pk": 4, "fields": { "book": 11, "genre": 2 } },
+  { "model": "books.bookgenre", "pk": 5, "fields": { "book": 12, "genre": 3 } },
+  { "model": "books.bookgenre", "pk": 6, "fields": { "book": 12, "genre": 2 } },
+  { "model": "books.bookgenre", "pk": 7, "fields": { "book": 13, "genre": 5 } },
+  { "model": "books.bookgenre", "pk": 8, "fields": { "book": 13, "genre": 4 } },
+  { "model": "books.bookgenre", "pk": 9, "fields": { "book": 14, "genre": 9 } },
+  {
+    "model": "books.bookgenre",
+    "pk": 10,
+    "fields": { "book": 14, "genre": 5 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 11,
+    "fields": { "book": 15, "genre": 1 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 12,
+    "fields": { "book": 15, "genre": 6 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 13,
+    "fields": { "book": 16, "genre": 7 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 14,
+    "fields": { "book": 16, "genre": 2 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 15,
+    "fields": { "book": 17, "genre": 9 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 16,
+    "fields": { "book": 17, "genre": 8 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 17,
+    "fields": { "book": 18, "genre": 4 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 18,
+    "fields": { "book": 18, "genre": 9 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 19,
+    "fields": { "book": 19, "genre": 11 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 20,
+    "fields": { "book": 19, "genre": 9 }
+  },
+  {
+    "model": "books.bookgenre",
+    "pk": 21,
+    "fields": { "book": 20, "genre": 4 }
+  },
+  { "model": "books.bookgenre", "pk": 22, "fields": { "book": 20, "genre": 9 } }
+]

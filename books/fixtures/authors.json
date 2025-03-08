@@ -1,0 +1,62 @@
+[
+  {
+    "model": "books.author",
+    "pk": 1,
+    "fields": { "author_name": "J.K. Rowling" }
+  },
+  {
+    "model": "books.author",
+    "pk": 2,
+    "fields": { "author_name": "Dan Brown" }
+  },
+  {
+    "model": "books.author",
+    "pk": 3,
+    "fields": { "author_name": "Premchand" }
+  },
+  {
+    "model": "books.author",
+    "pk": 4,
+    "fields": { "author_name": "Sumitranandan Pant" }
+  },
+  {
+    "model": "books.author",
+    "pk": 5,
+    "fields": { "author_name": "Ravi Patil" }
+  },
+  {
+    "model": "books.author",
+    "pk": 6,
+    "fields": { "author_name": "Radhakrishna Patil" }
+  },
+  {
+    "model": "books.author",
+    "pk": 7,
+    "fields": { "author_name": "Qutub Bin Said" }
+  },
+  {
+    "model": "books.author",
+    "pk": 8,
+    "fields": { "author_name": "Dr. B.R. Ambedkar" }
+  },
+  {
+    "model": "books.author",
+    "pk": 9,
+    "fields": { "author_name": "Nirantar Shankar" }
+  },
+  {
+    "model": "books.author",
+    "pk": 10,
+    "fields": { "author_name": "Suraj Wagh" }
+  },
+  {
+    "model": "books.author",
+    "pk": 11,
+    "fields": { "author_name": "Sushma Patil" }
+  },
+  {
+    "model": "books.author",
+    "pk": 12,
+    "fields": { "author_name": "Dattatreya Patil" }
+  }
+]
