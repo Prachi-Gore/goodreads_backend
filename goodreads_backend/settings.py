@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os
 import cloudinary
-from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -101,11 +100,8 @@ DATABASES = {
          "NAME": os.getenv("DB_NAME", "goodreads"),
         "USER": os.getenv("DB_USER", "postgres"),
         "PASSWORD": os.getenv("DB_PASSWORD", ""),
-        'HOST': 'localhost',  # Or '127.0.0.1' for local MySQL server
-        'PORT': '5432',  # The default MySQL port
-        # 'OPTIONS': {
-        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        # },
+        'HOST': 'localhost',  # Or '127.0.0.1' 
+        'PORT': '5432'
     }
 }
 
@@ -178,11 +174,6 @@ DEFAULT_FROM_EMAIL = 'noreply@example.com'
 OTP_EXPIRY_TIME = 4  # Minutes
 
 # store book cover data 
-# CLOUDINARY_STORAGE = {
-#     "CLOUD_NAME": "dbkgaclca",
-#     "API_KEY": "855482519328274",
-#     "API_SECRET": "aoPe6X1epIlkjNnPZzP_9RVLELI",
-# }
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
     api_key=os.getenv("CLOUDINARY_API_KEY"),
