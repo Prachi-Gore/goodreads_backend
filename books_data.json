@@ -1,0 +1,469 @@
+
+[
+{
+    "model": "books.author",
+    "pk": "214b3fb8-95ae-4cdd-a8b0-8c464c955dfe",
+    "fields": {
+        "author_name": "Suraj Wagh"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "2a981c87-5ee3-4b97-b55a-a9c4685bbb32",
+    "fields": {
+        "author_name": "Premchand"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "3b58aa40-dd86-4767-b6ba-01d5401ca98a",
+    "fields": {
+        "author_name": "Radhakrishna Patil"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "5fa13317-8fa7-4fab-bbff-4778dc173c85",
+    "fields": {
+        "author_name": "Dattatreya Patil"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "7ab42498-bd62-4d45-b6f3-73c8a3c83c8d",
+    "fields": {
+        "author_name": "Qutub Bin Said"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "803b7874-8054-45ac-bcb6-7ee20597ef77",
+    "fields": {
+        "author_name": "Sumitranandan Pant"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "9d0b81df-dae7-4906-b48b-9017a14d7d4d",
+    "fields": {
+        "author_name": "J.K. Rowling"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "ae7126d4-6f0a-4eed-a581-d6d951f1152e",
+    "fields": {
+        "author_name": "Sushma Patil"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "b1a3f740-d317-4bfe-99b6-4e5c226e4899",
+    "fields": {
+        "author_name": "Dr. B.R. Ambedkar"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "c8b1d77e-677e-499c-8293-ba87fadbfdc3",
+    "fields": {
+        "author_name": "Dan Brown"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "d8fd91b4-63b9-4b8d-b4d1-2503026312da",
+    "fields": {
+        "author_name": "Ravi Patil"
+    }
+},
+{
+    "model": "books.author",
+    "pk": "f8c4b03a-b0b2-4798-baed-48eba9b37a2b",
+    "fields": {
+        "author_name": "Nirantar Shankar"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "3e265878-6f2e-4a76-b025-0772f3ad11ab",
+    "fields": {
+        "genre_name": "Novel"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "506d4e2d-064e-48dd-8c21-18be44b77c0d",
+    "fields": {
+        "genre_name": "Psychology"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "6cbf9cdd-6789-4d3a-bf3c-09e2a01a0b04",
+    "fields": {
+        "genre_name": "Biography"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "6d29b3f8-b8ec-4735-838b-61c13d95c4d0",
+    "fields": {
+        "genre_name": "Short Stories"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "93b4b068-2203-4d20-8f5f-02b942f75a7a",
+    "fields": {
+        "genre_name": "Story"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "9b1ba576-d15f-4298-8ece-620c89d1a20d",
+    "fields": {
+        "genre_name": "Literature"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "9b443b4c-aa49-40a4-9d09-e3256ec19a77",
+    "fields": {
+        "genre_name": "Romance"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "9ebd164f-12c4-4978-94a0-dffa97c4b2d9",
+    "fields": {
+        "genre_name": "Social"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "ab6fe205-3950-488a-809e-286614666245",
+    "fields": {
+        "genre_name": "Education"
+    }
+},
+{
+    "model": "books.genre",
+    "pk": "f5c87c7f-bc43-49ca-9530-a9ee902e3135",
+    "fields": {
+        "genre_name": "History"
+    }
+},
+{
+    "model": "books.book",
+    "pk": "44ad6454-9626-43a2-9d92-59da3c763057",
+    "fields": {
+        "book_cover": "image/upload/v1741459963/up3lf0hgoogpcywbiefc.jpg",
+        "title": "King Salim",
+        "author": "214b3fb8-95ae-4cdd-a8b0-8c464c955dfe",
+        "description": "A story based on the life of Mughal King Salim.",
+        "pages": 400,
+        "publish_date": "2020-10-17",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:52:43.476Z",
+        "updated_at": "2025-03-08T18:52:43.476Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "492df77f-4d44-47f2-ab94-a485fffac953",
+    "fields": {
+        "book_cover": "image/upload/v1741459544/jdjzdvueyqil9zudrfoo.jpg",
+        "title": "Where Is What?",
+        "author": "f8c4b03a-b0b2-4798-baed-48eba9b37a2b",
+        "description": "A collection of stories based on psychological themes.",
+        "pages": 230,
+        "publish_date": "2014-09-30",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:45:44.813Z",
+        "updated_at": "2025-03-08T18:45:44.813Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "5e42907c-ab21-4425-9285-0b7d8ebddd67",
+    "fields": {
+        "book_cover": "image/upload/v1741458547/stk9pcwuibnb7fmzvabh.jpg",
+        "title": "Shivaji: The Lion of Hind",
+        "author": "d8fd91b4-63b9-4b8d-b4d1-2503026312da",
+        "description": "An inspiring book based on the life of Chhatrapati Shivaji Maharaj.",
+        "pages": 500,
+        "publish_date": "2000-12-04",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:29:07.328Z",
+        "updated_at": "2025-03-08T18:29:07.328Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "652b2952-bae7-4a20-a455-d35b5a42bdfd",
+    "fields": {
+        "book_cover": "image/upload/v1741459010/sygpvtevaodi7exih9et.jpg",
+        "title": "Master of Novels",
+        "author": "7ab42498-bd62-4d45-b6f3-73c8a3c83c8d",
+        "description": "An exquisite collection of Indian novels.",
+        "pages": 500,
+        "publish_date": "2010-11-06",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:36:50.508Z",
+        "updated_at": "2025-03-08T18:38:45.495Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "86f04160-2786-462f-94f8-f83109c6efb7",
+    "fields": {
+        "book_cover": "image/upload/v1741459374/lw5phznw0mlf2wpfzhr1.jpg",
+        "title": "Teaching and Educational Principles",
+        "author": "b1a3f740-d317-4bfe-99b6-4e5c226e4899",
+        "description": "A book based on the principles of education.",
+        "pages": 420,
+        "publish_date": "1947-04-12",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:42:54.721Z",
+        "updated_at": "2025-03-08T18:42:54.721Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "9a64d333-6834-44d7-9dbe-cb70f35321e1",
+    "fields": {
+        "book_cover": "image/upload/v1741460445/s8qwqajjdlwssbvuzmt8.jpg",
+        "title": "Shivaji and His Era",
+        "author": "5fa13317-8fa7-4fab-bbff-4778dc173c85",
+        "description": "A detailed account of historical events during Chhatrapati Shivaji Maharaj's time.",
+        "pages": 800,
+        "publish_date": "1950-09-30",
+        "rating": 0.0,
+        "created_at": "2025-03-08T19:00:45.920Z",
+        "updated_at": "2025-03-08T19:00:45.920Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "ba3072a0-80e1-4492-ab95-71704a001e3c",
+    "fields": {
+        "book_cover": "image/upload/v1741458815/ii53xrcomkmbhoabxpdu.jpg",
+        "title": "My Father's Stories",
+        "author": "3b58aa40-dd86-4767-b6ba-01d5401ca98a",
+        "description": "A son's narration of his father's life stories.",
+        "pages": 101,
+        "publish_date": "2005-06-18",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:33:35.681Z",
+        "updated_at": "2025-03-08T18:39:36.220Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "d021d977-77cc-497f-aae4-e4cb489c5d4f",
+    "fields": {
+        "book_cover": "image/upload/v1741440060/dkeo5s7db1yzxxe1b0xh.jpg",
+        "title": "Kasba",
+        "author": "803b7874-8054-45ac-bcb6-7ee20597ef77",
+        "description": "A collection of stories featuring various characters in a small town.",
+        "pages": 250,
+        "publish_date": "1980-02-25",
+        "rating": 3.0,
+        "created_at": "2025-03-08T13:21:00.399Z",
+        "updated_at": "2025-03-08T17:42:52.058Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "e88721e1-3223-4967-b1c2-be8e71f7cdc5",
+    "fields": {
+        "book_cover": "image/upload/v1741460259/kn6jgt4khxx4pjgisn5g.jpg",
+        "title": "Web of Hopes",
+        "author": "ae7126d4-6f0a-4eed-a581-d6d951f1152e",
+        "description": "An exciting love story.",
+        "pages": 400,
+        "publish_date": "2019-05-05",
+        "rating": 0.0,
+        "created_at": "2025-03-08T18:57:39.114Z",
+        "updated_at": "2025-03-08T18:57:39.114Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.book",
+    "pk": "f6dbf25f-09fd-4388-9200-94fbd30b6d45",
+    "fields": {
+        "book_cover": "image/upload/v1740915935/l7l2d4s0j8uz1c5uqgxl.jpg",
+        "title": "Godaan",
+        "author": "2a981c87-5ee3-4b97-b55a-a9c4685bbb32",
+        "description": "This novel narrates the struggles of an Indian farmer facing life's challenges.",
+        "pages": 300,
+        "publish_date": "1936-04-25",
+        "rating": 3.0,
+        "created_at": "2025-03-02T11:45:36.042Z",
+        "updated_at": "2025-03-02T13:39:28.387Z",
+        "bookshelf": null
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 1,
+    "fields": {
+        "book": "f6dbf25f-09fd-4388-9200-94fbd30b6d45",
+        "genre": "9ebd164f-12c4-4978-94a0-dffa97c4b2d9"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 2,
+    "fields": {
+        "book": "f6dbf25f-09fd-4388-9200-94fbd30b6d45",
+        "genre": "3e265878-6f2e-4a76-b025-0772f3ad11ab"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 3,
+    "fields": {
+        "book": "d021d977-77cc-497f-aae4-e4cb489c5d4f",
+        "genre": "9ebd164f-12c4-4978-94a0-dffa97c4b2d9"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 4,
+    "fields": {
+        "book": "d021d977-77cc-497f-aae4-e4cb489c5d4f",
+        "genre": "6d29b3f8-b8ec-4735-838b-61c13d95c4d0"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 5,
+    "fields": {
+        "book": "5e42907c-ab21-4425-9285-0b7d8ebddd67",
+        "genre": "9b1ba576-d15f-4298-8ece-620c89d1a20d"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 6,
+    "fields": {
+        "book": "5e42907c-ab21-4425-9285-0b7d8ebddd67",
+        "genre": "6cbf9cdd-6789-4d3a-bf3c-09e2a01a0b04"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 7,
+    "fields": {
+        "book": "ba3072a0-80e1-4492-ab95-71704a001e3c",
+        "genre": "9b1ba576-d15f-4298-8ece-620c89d1a20d"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 8,
+    "fields": {
+        "book": "652b2952-bae7-4a20-a455-d35b5a42bdfd",
+        "genre": "3e265878-6f2e-4a76-b025-0772f3ad11ab"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 9,
+    "fields": {
+        "book": "652b2952-bae7-4a20-a455-d35b5a42bdfd",
+        "genre": "ab6fe205-3950-488a-809e-286614666245"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 10,
+    "fields": {
+        "book": "ba3072a0-80e1-4492-ab95-71704a001e3c",
+        "genre": "9b443b4c-aa49-40a4-9d09-e3256ec19a77"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 11,
+    "fields": {
+        "book": "86f04160-2786-462f-94f8-f83109c6efb7",
+        "genre": "6d29b3f8-b8ec-4735-838b-61c13d95c4d0"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 12,
+    "fields": {
+        "book": "86f04160-2786-462f-94f8-f83109c6efb7",
+        "genre": "506d4e2d-064e-48dd-8c21-18be44b77c0d"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 13,
+    "fields": {
+        "book": "492df77f-4d44-47f2-ab94-a485fffac953",
+        "genre": "93b4b068-2203-4d20-8f5f-02b942f75a7a"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 14,
+    "fields": {
+        "book": "492df77f-4d44-47f2-ab94-a485fffac953",
+        "genre": "9b443b4c-aa49-40a4-9d09-e3256ec19a77"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 15,
+    "fields": {
+        "book": "44ad6454-9626-43a2-9d92-59da3c763057",
+        "genre": "6cbf9cdd-6789-4d3a-bf3c-09e2a01a0b04"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 16,
+    "fields": {
+        "book": "44ad6454-9626-43a2-9d92-59da3c763057",
+        "genre": "9b443b4c-aa49-40a4-9d09-e3256ec19a77"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 17,
+    "fields": {
+        "book": "e88721e1-3223-4967-b1c2-be8e71f7cdc5",
+        "genre": "9b443b4c-aa49-40a4-9d09-e3256ec19a77"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 18,
+    "fields": {
+        "book": "9a64d333-6834-44d7-9dbe-cb70f35321e1",
+        "genre": "6cbf9cdd-6789-4d3a-bf3c-09e2a01a0b04"
+    }
+},
+{
+    "model": "books.bookgenre",
+    "pk": 19,
+    "fields": {
+        "book": "9a64d333-6834-44d7-9dbe-cb70f35321e1",
+        "genre": "9b443b4c-aa49-40a4-9d09-e3256ec19a77"
+    }
+}
+]

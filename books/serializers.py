@@ -24,16 +24,16 @@ class ReviewSerializer(ModelSerializer):
 
         
 class BookSerializer(ModelSerializer):
-    # author = AuthorSerializer(read_only=True)  # Include author details
-    # genres = GenreSerializer(many=True, read_only=True)  # Include list of genre details
+    author = AuthorSerializer(read_only=True)  # Include author details
+    genres = GenreSerializer(many=True, read_only=True)  # Include list of genre details
     book_cover = serializers.ImageField()  # Ensures it shows as a file upload field in browser
-    author = serializers.PrimaryKeyRelatedField(queryset=Author.objects.all())  # Shows dropdown for author
-    genres = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)  # Multi-select for genres
+    # author = serializers.PrimaryKeyRelatedField(queryset=Author.objects.all())  # Shows dropdown for author in browsable api
+    # genres = serializers.PrimaryKeyRelatedField(queryset=Genre.objects.all(), many=True)  # Multi-select for genres
     reviews = ReviewSerializer(many=True, read_only=True)
     class Meta:
         model=Book
         fields="__all__"
-        read_only_fields = ['createdAt', 'updatedAt']
+        read_only_fields = ['created_at', 'updated_at']
 
      # Custom validation to check if genres are provided
     def validate_genres(self, value):

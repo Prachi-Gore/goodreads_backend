@@ -148,7 +148,7 @@ class ReviewViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
-    parser_classes = (MultiPartParser, FormParser)  # Enable file uploads
+   #  parser_classes = (MultiPartParser, FormParser)  # Enable file uploads
    #  def perform_create(self, serializer):
    #      # Automatically associate the user with the review
    #      serializer.save(user=self.request.user)  # Set user here
