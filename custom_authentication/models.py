@@ -8,6 +8,7 @@ from django.utils.timezone import now
 import random
 import uuid
 import cloudinary
+from django.db.models.functions import Lower
 
 # Create your models here.
 
@@ -16,10 +17,15 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True,null=False, blank=False)
     username = models.CharField(max_length=150, blank=False, null=False, unique=True)
     USERNAME_FIELD = 'email'  # Make email the default identifier
-
     REQUIRED_FIELDS = ['username']
-    print("*** CustomUser model ")
 
+    print("*** CustomUser model ")
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                Lower('username'), name='unique_lower_username'
+            )
+        ]
     
     def __str__(self):
         return f'{self.email} {self.username}'

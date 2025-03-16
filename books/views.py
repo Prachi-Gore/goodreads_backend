@@ -10,6 +10,9 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.parsers import MultiPartParser, FormParser
 from .models import Review
 from .serializers import ReviewSerializer
+from django.db.models import Prefetch
+from django.utils.timezone import now
+
 # from django.views.decorators.csrf import csrf_exempt
 # from django.utils.decorators import method_decorator
 # from rest_framework.permissions import IsAuthenticated
@@ -64,7 +67,12 @@ class BookDetailView(APIView):
    
    def get(self,request,pk):
       print('request ',request)
-      book=Book.objects.get(pk=pk)
+      book = Book.objects.prefetch_related(
+            Prefetch(
+                'reviews', # this is related name from Review Model
+                queryset=Review.objects.order_by('-created_at')
+            )
+        ).get(pk=pk)
       serialized_book=BookSerializer(book)
       return Response(serialized_book.data)
    
@@ -146,7 +154,7 @@ class BookDetailView(APIView):
 
 class ReviewViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
-    queryset = Review.objects.all()
+    queryset = Review.objects.all().order_by("-created_at") 
     serializer_class = ReviewSerializer
    #  parser_classes = (MultiPartParser, FormParser)  # Enable file uploads
    #  def perform_create(self, serializer):
@@ -175,7 +183,11 @@ class ReviewViewSet(ModelViewSet):
                 status=status.HTTP_403_FORBIDDEN
             )
         
-        response = super().update(request, *args, **kwargs)
+        instance.updated_at = now()
+        instance.save(update_fields=["updated_at"])
+
+        response = super().partial_update(request, *args, **kwargs)
+
         return Response(
             {"message": "Review updated successfully", "data": response.data},
             status=status.HTTP_200_OK
