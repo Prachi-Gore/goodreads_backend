@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os
+import urllib.parse
 import cloudinary
 from dotenv import load_dotenv
 import dj_database_url
@@ -44,6 +45,7 @@ CORS_ALLOWED_ORIGINS=['http://localhost:5173']
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +61,8 @@ INSTALLED_APPS = [
     "cloudinary",
     'books',
     'custom_authentication',
-    'bookshelf'
+    'bookshelf',
+    'chat'
 ]
 
 MIDDLEWARE = [
@@ -92,8 +95,18 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'goodreads_backend.wsgi.application'
+# WSGI_APPLICATION = 'goodreads_backend.wsgi.application'
+ASGI_APPLICATION = 'goodreads_backend.asgi.application'
 
+redis_url = urllib.parse.urlparse(os.environ.get("REDIS_URL", "redis://127.0.0.1:6379"))
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [(redis_url.hostname, redis_url.port)],
+        },
+    },
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

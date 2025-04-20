@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('books.urls')),
     path('api/',include('custom_authentication.urls')),
-    path('api/',include('bookshelf.urls'))
+    path('api/',include('bookshelf.urls')),
+    path('api/',include('chat.urls'))
 ]
 
 
