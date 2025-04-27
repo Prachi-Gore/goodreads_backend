@@ -39,3 +39,11 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"To: {self.recipient.username} | {self.message}"
+
+class Group(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    name = models.CharField(max_length=255)
+    created_by = models.ForeignKey(User, related_name='created_groups', on_delete=models.CASCADE)
+    members = models.ManyToManyField(User, related_name='groups_for_user')
+    admins = models.ManyToManyField(User, related_name='admin_groups')
+    created_at = models.DateTimeField(auto_now_add=True)        

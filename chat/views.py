@@ -1,7 +1,7 @@
 from rest_framework import viewsets, permissions,status
 from django.contrib.auth import get_user_model
-from .serializers import UserStatusSerializer,NotificationSerializer
-from .models import Notification,ConnectionRequest
+from .serializers import UserStatusSerializer,NotificationSerializer,GroupSerializer
+from .models import Notification,ConnectionRequest,Group
 from rest_framework.response import Response
 from .utils import save_and_send_real_time_notification
 from django.db.models import Q
@@ -103,3 +103,11 @@ class NotificationViewSet(viewsets.ReadOnlyModelViewSet):
     #     # Optional: Ensure only the owner can delete their own notifications
     #     if instance.recipient == self.request.user:
     #         instance.delete()
+
+class GroupViewSet(viewsets.ModelViewSet):
+    queryset = Group.objects.all()
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = GroupSerializer
+
+    def get_queryset(self):
+        return self.request.user.groups.all()
