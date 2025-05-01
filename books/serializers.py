@@ -6,12 +6,12 @@ from rest_framework import serializers
 class AuthorSerializer(ModelSerializer):
     class Meta:
         model = Author
-        fields ="__all__" 
+        fields = ['id', 'author_name']
 
 class GenreSerializer(ModelSerializer):
     class Meta:
         model = Genre
-        fields ="__all__" 
+        fields = ['id', 'genre_name']
 
 # review
 class ReviewSerializer(ModelSerializer):

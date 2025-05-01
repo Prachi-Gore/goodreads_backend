@@ -7,8 +7,9 @@ from django.conf import settings
 from django.utils.timezone import now
 import random
 import uuid
-import cloudinary
 from django.db.models.functions import Lower
+from core.models import BaseModel
+
 
 # Create your models here.
 
@@ -31,8 +32,7 @@ class CustomUser(AbstractUser):
         return f'{self.email} {self.username}'
     
 User=get_user_model()
-class ForgotPasswordOtp(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+class ForgotPasswordOtp(BaseModel):
     user=models.ForeignKey(User,on_delete=models.CASCADE) # could be multiple otp corresponding to single user
     otp= models.CharField(max_length=6,
         validators=[
@@ -40,7 +40,6 @@ class ForgotPasswordOtp(models.Model):
             RegexValidator(r'^\d{6}$', 'OTP must be exactly 6 digits')  # Ensures only numbers
         ])
     is_verified=models.BooleanField(default=False)
-    created_at=models.DateTimeField(auto_now_add=True)    
 
     def is_expired(self):
         return now() >self.created_at+timedelta(minutes=settings.OTP_EXPIRY_TIME)

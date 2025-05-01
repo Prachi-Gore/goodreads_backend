@@ -63,7 +63,7 @@ class GroupSerializer(serializers.ModelSerializer):
         # Create notifications
         User = get_user_model()
         members = User.objects.filter(id__in=member_ids)
-        msg=f"You were added to group '{group.name}'"
+        msg=f"{request_user.username} added you to group '{group.name}'"
         for member in members:
             # Notification.objects.create(
             #     recipient=member,
