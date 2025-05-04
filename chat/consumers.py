@@ -28,3 +28,19 @@ class NotificationConsumer(AsyncWebsocketConsumer):
             # 'timestamp': event.get('timestamp')  
         }))
 
+    async def group_create(self, event):
+        print("group_create hit")
+        await self.send(text_data=json.dumps({
+            'type': event['type'],
+            'message': event['message'],
+            # 'timestamp': event.get('timestamp')  
+        }))
+
+    async def chat_message(self, event):
+        print("chat_message hit")
+        await self.send(text_data=json.dumps({
+            'type': event['type'],
+            'message': event['message'],
+            # 'timestamp': event.get('timestamp')  
+        }))    
+

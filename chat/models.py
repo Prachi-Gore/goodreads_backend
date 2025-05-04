@@ -42,3 +42,11 @@ class Group(BaseModel):
     created_by = models.ForeignKey(User, related_name='created_groups', on_delete=models.CASCADE)
     members = models.ManyToManyField(User, related_name='groups_for_user')
     admins = models.ManyToManyField(User, related_name='admin_groups')
+
+
+class Message(BaseModel):
+    sender = models.ForeignKey(User, on_delete=models.CASCADE, related_name='sent_messages')
+    receiver = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE, related_name='received_messages')
+    group = models.ForeignKey(Group, null=True, blank=True, on_delete=models.CASCADE, related_name='group_messages')
+    content = models.TextField()
+    

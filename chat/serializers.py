@@ -1,9 +1,9 @@
 # from django.db import models
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
-from .models import ConnectionRequest,Notification,Group
+from .models import ConnectionRequest,Notification,Group,Message
 from .utils import save_and_send_real_time_notification
-# from custom_authentication.serializers import UserSerializer
+from custom_authentication.serializers import UserSerializer
 
 User=get_user_model()
 
@@ -50,7 +50,7 @@ class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = ['name', 'member_ids']
+        fields = ['id','name', 'member_ids']
 
     def create(self, validated_data):
         member_ids = validated_data.pop('member_ids')
@@ -65,12 +65,14 @@ class GroupSerializer(serializers.ModelSerializer):
         members = User.objects.filter(id__in=member_ids)
         msg=f"{request_user.username} added you to group '{group.name}'"
         for member in members:
-            # Notification.objects.create(
-            #     recipient=member,
-            #     message=msg,
-            #     # notification_type='group_added'
-            # )
             # Send WebSocket notification 
-            save_and_send_real_time_notification(recipient=member, msg=msg)
+            save_and_send_real_time_notification(recipient=member, msg=msg,isNotification=True,type="group_create")
 
-        return group        
+        return group  
+
+class MessageSerializer(serializers.ModelSerializer):
+    sender = UserSerializer(read_only=True)    
+    class Meta:
+        model = Message
+        fields = '__all__'
+        read_only_fields = ['id', 'sender', 'created_at']      
