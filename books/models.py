@@ -4,6 +4,8 @@ from cloudinary.models import CloudinaryField
 from custom_authentication.models import CustomUser
 from core.models import BaseModel
 from django.core.validators import MinValueValidator, MaxValueValidator
+import uuid
+# from django.utils import timezone
 
 # Create your models here.
 class Author(BaseModel):
@@ -43,13 +45,22 @@ class BookGenre (BaseModel):
     
 
 # review
-class Review(BaseModel):
+class Review(models.Model):
+    # updated_at = models.DateTimeField(null=True, blank=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    created_at = models.DateTimeField(auto_now_add=True,null=True)  # when create first time
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE) 
     book=models.ForeignKey(Book,on_delete=models.CASCADE,related_name='reviews')
     review = models.TextField(blank=True, null=True) 
 
     def __str__(self):
         return f'{self.review}'
+
+    # def save(self, *args, **kwargs):
+    #     print("review self ",self.pk)
+    #     if self.pk:  # Only update if object already exists (i.e., not during creation)
+    #         self.updated_at = timezone.now()
+    #     super().save(*args, **kwargs)  
 
 # bookshelf
 
