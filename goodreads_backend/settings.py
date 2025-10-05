@@ -59,7 +59,8 @@ INSTALLED_APPS = [
     'corsheaders',
     "cloudinary_storage",
     "cloudinary",
-    'books',
+    # 'books',
+    "books.apps.BooksConfig",
     'custom_authentication',
     'bookshelf',
     'chat'
@@ -224,3 +225,4 @@ SIMPLE_JWT = {
 }
 
 AUTH_USER_MODEL = 'custom_authentication.CustomUser'
+FASTAPI_URL = os.getenv("FASTAPI_URL", "http://127.0.0.1:8000")

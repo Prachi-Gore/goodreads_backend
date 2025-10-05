@@ -12,6 +12,8 @@ from .models import Review
 from .serializers import ReviewSerializer
 from django.db.models import Prefetch
 from django.utils.timezone import now
+import requests
+from django.conf import settings
 
 # from django.views.decorators.csrf import csrf_exempt
 # from django.utils.decorators import method_decorator
@@ -204,3 +206,22 @@ class ReviewViewSet(ModelViewSet):
         
         super().destroy(request, *args, **kwargs)
         return Response({"message": "Review deleted successfully"}, status=status.HTTP_200_OK)    
+    
+class GenerateQuizWrapper(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        payload = {"book_id": request.data["book_id"]}
+        resp = requests.post(f"{settings.FASTAPI_URL}/generate_quiz", json=payload)
+        return Response(resp.json())
+
+class EvaluateAnswersWrapper(ModelViewSet):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        payload = {
+            "book_id": request.data["book_id"],
+            "user_answers": request.data["user_answers"]
+        }
+        resp = requests.post(f"{settings.FASTAPI_URL}/evaluate_answers", json=payload)
+        return Response(resp.json())    

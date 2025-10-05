@@ -18,7 +18,7 @@ class Genre(BaseModel):
     def __str__(self):
         return f'{self.genre_name}'
 
-class Book (BaseModel):
+class Book(BaseModel):
    # book_cover = models.ImageField(upload_to='book_covers/',blank=False,null=False)  # Uploads to MEDIA_ROOT/book_covers/ here media/book_caover/exsmple.jpg
     book_cover =CloudinaryField('book_cover')  # Stores image in Cloudinary
     title = models.CharField(max_length = 255,blank=False)
