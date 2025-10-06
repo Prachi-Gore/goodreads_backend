@@ -48,3 +48,6 @@ class BookSerializer(ModelSerializer):
 #      class Meta:
 #         model=Bookshelf
 #         fields="__all__"
+
+class BookIdSerializer(serializers.Serializer):
+    book_id = serializers.UUIDField()

@@ -9,7 +9,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.parsers import MultiPartParser, FormParser
 from .models import Review
-from .serializers import ReviewSerializer
+from .serializers import ReviewSerializer,BookIdSerializer
 from django.db.models import Prefetch
 from django.utils.timezone import now
 import requests
@@ -209,8 +209,8 @@ class ReviewViewSet(ModelViewSet):
     
 class GenerateQuizWrapper(ModelViewSet):
     permission_classes = [IsAuthenticated]
-
-    def post(self, request):
+    serializer_class=BookIdSerializer
+    def create(self, request):
         payload = {"book_id": request.data["book_id"]}
         resp = requests.post(f"{settings.FASTAPI_URL}/generate_quiz", json=payload)
         return Response(resp.json())
@@ -218,7 +218,7 @@ class GenerateQuizWrapper(ModelViewSet):
 class EvaluateAnswersWrapper(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
-    def post(self, request):
+    def create(self, request):
         payload = {
             "book_id": request.data["book_id"],
             "user_answers": request.data["user_answers"]
