@@ -213,6 +213,8 @@ class GenerateQuizWrapper(ModelViewSet):
     def create(self, request):
         payload = {"book_id": request.data["book_id"]}
         resp = requests.post(f"{settings.FASTAPI_URL}/generate_quiz", json=payload)
+        # print("Status code:", resp.status_code)
+        print("Response text:", resp)
         return Response(resp.json())
 
 class EvaluateAnswersWrapper(ModelViewSet):
@@ -221,7 +223,9 @@ class EvaluateAnswersWrapper(ModelViewSet):
     def create(self, request):
         payload = {
             "book_id": request.data["book_id"],
-            "user_answers": request.data["user_answers"]
+            "user_answers": request.data["user_answers"],
+            "quiz_details": request.data["quiz_details"]
         }
+        # print('payload ',payload,request)
         resp = requests.post(f"{settings.FASTAPI_URL}/evaluate_answers", json=payload)
         return Response(resp.json())    
