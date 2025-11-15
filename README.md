@@ -48,6 +48,12 @@
 - 🔹 **Django REST Framework (DRF)** – For API handling.
 - 🔹 **PostgreSQL** – For database management.
 - 🔹 **Cloudinary** – For storing book cover images.
+### **AI Agent**
+- 🔹 FastAPI – Built the AI agent service for quiz generation and evaluation.
+- 🔹 OpenAI API – Generated book summaries, quiz questions, and feedback.
+- 🔹 ChromaDB – Stored vector embeddings for Retrieval-Augmented Generation (RAG).
+- 🔹 RAG Pipeline – Used embeddings to generate context-aware quizzes and score evaluations.
+- 🔹 Embeddings – Created and stored embeddings whenever a new book was added.
 ### **Deployment**
 - 🔹 **Frontend**: Deployed on **Netlify**.
 - 🔹 **Backend**: Deployed on **Render**.
@@ -57,5 +63,4 @@
 
 ## 📩 Contact
 You can find more about me on my website: https://prachi-gore-portfolio.netlify.app/.
-
 
