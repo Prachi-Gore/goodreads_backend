@@ -22,6 +22,19 @@
 ### Bookshelves
 ✔️ Users can create bookshelves to organize their collections.
 ✔️ Add or remove books from bookshelves.
+### Cloud Storage Integration
+✔️ Utilized Cloudinary to store and retrieve book cover images dynamically
+### Friend Requests & Real-Time Notifications
+✔️ Users can send, accept, or reject connection requests with real-time updates via Web-Sockets. 
+✔️ Notifications for friend requests and group additions are stored in the database and fetched via REST API, ensuring live updates and dynamic unread count tracking      without page refresh.
+### Real-Time Chat
+✔️ Developed individual & group chat functionality with Django Channels and WebSockets, supporting persistent message storage in PostgreSQL and real-time updates
+  without page refresh.
+### AI-Powered Quiz Generation
+✔️ Integrated an AI Agent built with FastAPI that automatically generates personalized quizzes from book summaries, evaluates answers, provides scores and feedback,
+  and suggests sections for review. 
+✔️ When a book is added via the admin panel, a summary is generated using OpenAI API, and its embedding is stored in ChromaDB for
+  Retrieval-Augmented Generation(RAG)-based quiz and feedback generation.
 
 ## 🛠️ Built with modern web technologies
 ### **Frontend**
@@ -44,4 +57,5 @@
 
 ## 📩 Contact
 You can find more about me on my website: https://prachi-gore-portfolio.netlify.app/.
+
 
